@@ -1,10 +1,10 @@
 import { useState } from 'react';
 // @mui
+import IconButton from '@mui/material/IconButton';
 import { alpha } from '@mui/material/styles';
 import { Box, Divider, Typography, Stack, MenuItem, Avatar } from '@mui/material';
 // components
 import MenuPopover from '../../../components/MenuPopover';
-import { IconButtonAnimate } from '../../../components/animate';
 
 // ----------------------------------------------------------------------
 
@@ -38,7 +38,7 @@ export default function AccountPopover() {
 
   return (
     <>
-      <IconButtonAnimate
+      <IconButton
         onClick={handleOpen}
         sx={{
           p: 0,
@@ -56,7 +56,7 @@ export default function AccountPopover() {
         }}
       >
         <Avatar src="https://minimal-assets-api.vercel.app/assets/images/avatars/avatar_5.jpg" alt="Rayan Moran" />
-      </IconButtonAnimate>
+      </IconButton>
 
       <MenuPopover
         open={Boolean(open)}

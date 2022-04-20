@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 import { alpha, styled } from '@mui/material/styles';
 import { Tooltip } from '@mui/material';
 // utils
+import IconButton from '@mui/material/IconButton';
 import cssStyles from '../../utils/cssStyles';
 //
 import Iconify from '../Iconify';
-import { IconButtonAnimate } from '../animate';
 
 // ----------------------------------------------------------------------
 
@@ -49,7 +49,7 @@ export default function ToggleButton({ notDefault, open, onToggle }) {
       {notDefault && !open && <DotStyle />}
 
       <Tooltip title="Settings" placement="left">
-        <IconButtonAnimate
+        <IconButton
           color="inherit"
           onClick={onToggle}
           sx={{
@@ -62,7 +62,7 @@ export default function ToggleButton({ notDefault, open, onToggle }) {
           }}
         >
           <Iconify icon="eva:options-2-fill" width={20} height={20} />
-        </IconButtonAnimate>
+        </IconButton>
       </Tooltip>
     </RootStyle>
   );

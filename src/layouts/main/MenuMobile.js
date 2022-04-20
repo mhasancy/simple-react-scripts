@@ -4,13 +4,13 @@ import { NavLink as RouterLink, useLocation } from 'react-router-dom';
 // @mui
 import { alpha, styled } from '@mui/material/styles';
 import { Box, List, Link, Drawer, Collapse, ListItemText, ListItemIcon, ListItemButton } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
 // config
 import { NAVBAR } from '../../config';
 // components
 import Logo from '../../components/Logo';
 import Iconify from '../../components/Iconify';
 import Scrollbar from '../../components/Scrollbar';
-import { IconButtonAnimate } from '../../components/animate';
 import { NavSectionVertical } from '../../components/nav-section';
 
 // ----------------------------------------------------------------------
@@ -58,7 +58,7 @@ export default function MenuMobile({ isOffset, isHome, navConfig }) {
 
   return (
     <>
-      <IconButtonAnimate
+      <IconButton
         onClick={handleDrawerOpen}
         sx={{
           ml: 1,
@@ -67,7 +67,7 @@ export default function MenuMobile({ isOffset, isHome, navConfig }) {
         }}
       >
         <Iconify icon={'eva:menu-2-fill'} />
-      </IconButtonAnimate>
+      </IconButton>
 
       <Drawer
         open={drawerOpen}

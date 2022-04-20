@@ -1,11 +1,11 @@
 import { useState } from 'react';
+import IconButton from '@mui/material/IconButton';
 // @mui
 import { Divider, MenuItem, Stack, Typography } from '@mui/material';
 // components
 import Iconify from '../../../components/Iconify';
 import Image from '../../../components/Image';
 import MenuPopover from '../../../components/MenuPopover';
-import { IconButtonAnimate } from '../../../components/animate';
 import SettingMode from '../../../components/settings/SettingMode';
 import SettingColorPresets from '../../../components/settings/SettingColorPresets';
 import useSettings from '../../../hooks/useSettings';
@@ -32,8 +32,8 @@ const LANGS = [
 
 // ----------------------------------------------------------------------
 
-export default function LanguagePopover() {
-  const { themeMode, themeDirection, themeColorPresets, onResetSetting } = useSettings();
+export default function ModePopOver() {
+  const { onResetSetting } = useSettings();
   const [open, setOpen] = useState(null);
 
   const handleOpen = (event) => {
@@ -46,7 +46,7 @@ export default function LanguagePopover() {
 
   return (
     <>
-      <IconButtonAnimate
+      <IconButton
         onClick={handleOpen}
         sx={{
           width: 40,
@@ -55,7 +55,7 @@ export default function LanguagePopover() {
         }}
       >
            <Iconify icon="eva:options-2-fill" width={20} height={20} />
-      </IconButtonAnimate>
+      </IconButton>
 
       <MenuPopover
         open={Boolean(open)}
@@ -79,12 +79,12 @@ export default function LanguagePopover() {
          <Stack style={{width:"100px"}}  direction="row" alignItems="center" justifyContent="space-between" sx={{ py: 2, pr: 1, pl: 2.5, }}>
                 <Typography variant="subtitle1">Settings</Typography>
                 <div>
-                  <IconButtonAnimate onClick={onResetSetting}>
+                  <IconButton onClick={onResetSetting}>
                     <Iconify icon={'ic:round-refresh'} width={20} height={20} />
-                  </IconButtonAnimate>
-                  <IconButtonAnimate onClick={handleClose}>
+                  </IconButton>
+                  <IconButton onClick={handleClose}>
                     <Iconify icon={'eva:close-fill'} width={20} height={20} />
-                  </IconButtonAnimate>
+                  </IconButton>
                 </div>
               </Stack>
 

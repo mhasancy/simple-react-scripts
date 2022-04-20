@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 // @mui
 import { alpha, styled } from '@mui/material/styles';
 import { Backdrop, Divider, Typography, Stack, FormControlLabel, Radio } from '@mui/material';
+import IconButton from '@mui/material/IconButton';
 // hooks
 import useSettings from '../../hooks/useSettings';
 // utils
@@ -12,7 +13,6 @@ import cssStyles from '../../utils/cssStyles';
 import { NAVBAR, defaultSettings } from '../../config';
 //
 import Iconify from '../Iconify';
-import { IconButtonAnimate } from '../animate';
 //
 import ToggleButton from './ToggleButton';
 import SettingMode from './SettingMode';
@@ -85,12 +85,12 @@ export default function Settings() {
               <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ py: 2, pr: 1, pl: 2.5 }}>
                 <Typography variant="subtitle1">Settings</Typography>
                 <div>
-                  <IconButtonAnimate onClick={onResetSetting}>
+                  <IconButton onClick={onResetSetting}>
                     <Iconify icon={'ic:round-refresh'} width={20} height={20} />
-                  </IconButtonAnimate>
-                  <IconButtonAnimate onClick={handleClose}>
+                  </IconButton>
+                  <IconButton onClick={handleClose}>
                     <Iconify icon={'eva:close-fill'} width={20} height={20} />
-                  </IconButtonAnimate>
+                  </IconButton>
                 </div>
               </Stack>
 
