@@ -10,7 +10,6 @@ import useResponsive from '../../hooks/useResponsive';
 // components
 import Page from '../../components/Page';
 import Logo from '../../components/Logo';
-import Image from '../../components/Image';
 // sections
 
 // ----------------------------------------------------------------------
@@ -84,12 +83,7 @@ export default function Login() {
             <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
               Hi, Welcome Back
             </Typography>
-            <Image
-              visibleByDefault
-              disabledEffect
-              alt="login"
-              src="https://minimal-assets-api.vercel.app/assets/illustrations/illustration_login.png"
-            />
+           
           </SectionStyle>
         )}
 

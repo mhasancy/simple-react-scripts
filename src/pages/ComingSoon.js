@@ -5,7 +5,6 @@ import { Box, Button, Stack, Container, Typography, InputAdornment } from '@mui/
 
 // components
 import Page from '../components/Page';
-import SocialsButton from '../components/SocialsButton';
 
 // ----------------------------------------------------------------------
 
@@ -80,9 +79,7 @@ export default function ComingSoon() {
               sx={{ my: 5, '& .MuiOutlinedInput-root': { pr: 0.5 } }}
             /> */}
 
-            <Stack alignItems="center">
-              <SocialsButton size="large" initialColor />
-            </Stack>
+          
           </Box>
         </Container>
       </RootStyle>

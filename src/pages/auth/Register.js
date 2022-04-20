@@ -11,7 +11,6 @@ import { PATH_AUTH } from '../../routes/paths';
 // components
 import Page from '../../components/Page';
 import Logo from '../../components/Logo';
-import Image from '../../components/Image';
 // sections
 // import { RegisterForm } from '../../sections/auth/register';
 
@@ -87,12 +86,7 @@ export default function Register() {
             <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
               Manage the job more effectively with Minimal
             </Typography>
-            <Image
-              visibleByDefault
-              disabledEffect
-              alt="register"
-              src="https://minimal-assets-api.vercel.app/assets/illustrations/illustration_register.png"
-            />
+            
           </SectionStyle>
         )}
 

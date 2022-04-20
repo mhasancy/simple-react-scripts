@@ -4,7 +4,6 @@ import IconButton from '@mui/material/IconButton';
 import { Divider, MenuItem, Stack, Typography } from '@mui/material';
 // components
 import Iconify from '../../../components/Iconify';
-import Image from '../../../components/Image';
 import MenuPopover from '../../../components/MenuPopover';
 import SettingMode from '../../../components/settings/SettingMode';
 import useSettings from '../../../hooks/useSettings';

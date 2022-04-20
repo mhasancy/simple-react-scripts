@@ -6,7 +6,6 @@ import { Grid, Link, Divider, Container, Typography, Stack } from '@mui/material
 import { PATH_PAGE } from '../../routes/paths';
 // components
 import Logo from '../../components/Logo';
-import SocialsButton from '../../components/SocialsButton';
 
 // ----------------------------------------------------------------------
 
@@ -61,13 +60,7 @@ export default function MainFooter() {
               version of Material-UI ©, ready to be customized to your style.
             </Typography>
 
-            <Stack
-              direction="row"
-              justifyContent={{ xs: 'center', md: 'flex-start' }}
-              sx={{ mt: 5, mb: { xs: 5, md: 0 } }}
-            >
-              <SocialsButton sx={{ mx: 0.5 }} />
-            </Stack>
+     
           </Grid>
 
           <Grid item xs={12} md={7}>
