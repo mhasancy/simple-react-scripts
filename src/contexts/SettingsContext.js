@@ -13,10 +13,7 @@ const initialState = {
   ...defaultSettings,
   onChangeMode: () => {},
   onToggleMode: () => {},
-  onChangeColor: () => {},
-  onResetSetting: () => {},
-  setColor: defaultPreset,
-  colorOption: [],
+  setColor: defaultPreset
 };
 
 const SettingsContext = createContext(initialState);
@@ -30,7 +27,6 @@ SettingsProvider.propTypes = {
 function SettingsProvider({ children }) {
   const [settings, setSettings] = useLocalStorage('settings', {
     themeMode: initialState.themeMode,
-    themeColorPresets: initialState.themeColorPresets,
   });
 
   const onChangeMode = (event) => {
@@ -49,23 +45,13 @@ function SettingsProvider({ children }) {
 
 
 
-  const onChangeColor = (event) => {
-    setSettings({
-      ...settings,
-      themeColorPresets: event.target.value,
-    });
-  };
 
 
 
 
 
-  const onResetSetting = () => {
-    setSettings({
-      themeMode: initialState.themeMode,
-      themeColorPresets: initialState.themeColorPresets,
-    });
-  };
+
+ 
 
   return (
     <SettingsContext.Provider
@@ -74,17 +60,14 @@ function SettingsProvider({ children }) {
         // Mode
         onChangeMode,
         onToggleMode,
-        // Direction
-        // Color
-        onChangeColor,
+
         setColor: getColorPresets(settings.themeColorPresets),
         colorOption: colorPresets.map((color) => ({
           name: color.name,
           value: color.main,
         })),
 
-        // Reset Setting
-        onResetSetting,
+
       }}
     >
       {children}

@@ -12,7 +12,7 @@ import cssStyles from '../../utils/cssStyles';
 import { NAVBAR, defaultSettings } from '../../config';
 //
 import Iconify from '../Iconify';
-import { IconButtonAnimate, varFade } from '../animate';
+import { IconButtonAnimate } from '../animate';
 //
 import ToggleButton from './ToggleButton';
 import SettingMode from './SettingMode';
@@ -50,18 +50,7 @@ export default function Settings() {
     themeMode !== defaultSettings.themeMode ||
     themeColorPresets !== defaultSettings.themeColorPresets;
 
-  const varSidebar =
-    themeDirection !== 'rtl'
-      ? varFade({
-          distance: NAVBAR.BASE_WIDTH,
-          durationIn: 0.32,
-          durationOut: 0.32,
-        }).inRight
-      : varFade({
-          distance: NAVBAR.BASE_WIDTH,
-          durationIn: 0.32,
-          durationOut: 0.32,
-        }).inLeft;
+ 
 
   useEffect(() => {
     if (open) {
@@ -92,7 +81,7 @@ export default function Settings() {
       <AnimatePresence>
         {open && (
           <>
-            <RootStyle {...varSidebar}>
+            <RootStyle>
               <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ py: 2, pr: 1, pl: 2.5 }}>
                 <Typography variant="subtitle1">Settings</Typography>
                 <div>

@@ -163,7 +163,7 @@ export default function Router() {
           { path: 'pricing', element: <Pricing /> },
           { path: 'payment', element: <Payment /> },
           { path: '500', element: <Page500 /> },
-          { path: '404', element: <NotFound /> },
+          // { path: '404', element: <NotFound /> },
           { path: '*', element: <Navigate to="/404" replace /> },
         ],
       },
@@ -190,7 +190,7 @@ const PageThree = Loadable(lazy(() => import('../pages/PageThree')));
 const PageFour = Loadable(lazy(() => import('../pages/PageFour')));
 const PageFive = Loadable(lazy(() => import('../pages/PageFive')));
 const PageSix = Loadable(lazy(() => import('../pages/PageSix')));
-const NotFound = Loadable(lazy(() => import('../pages/Page404')));
+// const NotFound = Loadable(lazy(() => import('../pages/Page404')));
 // AUTHENTICATION
 const Login = Loadable(lazy(() => import('../pages/auth/Login')));
 const Register = Loadable(lazy(() => import('../pages/auth/Register')));

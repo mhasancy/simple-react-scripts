@@ -5,7 +5,6 @@ import { alpha, styled } from '@mui/material/styles';
 import { Box } from '@mui/material';
 //
 import Logo from './Logo';
-import ProgressBar from './ProgressBar';
 
 // ----------------------------------------------------------------------
 
@@ -31,7 +30,7 @@ LoadingScreen.propTypes = {
 export default function LoadingScreen({ isDashboard, ...other }) {
   return (
     <>
-      <ProgressBar />
+   
 
       {!isDashboard && (
         <RootStyle {...other}>

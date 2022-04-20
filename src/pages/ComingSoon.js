@@ -2,7 +2,7 @@
 import { styled } from '@mui/material/styles';
 import { Box, Button, Stack, Container, Typography, InputAdornment } from '@mui/material';
 // hooks
-import useCountdown from '../hooks/useCountdown';
+
 // components
 import Page from '../components/Page';
 import SocialsButton from '../components/SocialsButton';
@@ -32,7 +32,7 @@ const SeparatorStyle = styled(Typography)(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function ComingSoon() {
-  const countdown = useCountdown(new Date('07/07/2022 21:30'));
+  
 
   return (
     <Page title="Coming Soon" sx={{ height: 1 }}>
@@ -48,30 +48,21 @@ export default function ComingSoon() {
 
             <CountdownStyle>
               <div>
-                <Typography variant="h2">{countdown.days}</Typography>
+                
                 <Typography sx={{ color: 'text.secondary' }}>Days</Typography>
               </div>
 
               <SeparatorStyle variant="h2">:</SeparatorStyle>
 
-              <div>
-                <Typography variant="h2">{countdown.hours}</Typography>
-                <Typography sx={{ color: 'text.secondary' }}>Hours</Typography>
-              </div>
+             
 
               <SeparatorStyle variant="h2">:</SeparatorStyle>
 
-              <div>
-                <Typography variant="h2">{countdown.minutes}</Typography>
-                <Typography sx={{ color: 'text.secondary' }}>Minutes</Typography>
-              </div>
+              
 
               <SeparatorStyle variant="h2">:</SeparatorStyle>
 
-              <div>
-                <Typography variant="h2">{countdown.seconds}</Typography>
-                <Typography sx={{ color: 'text.secondary' }}>Seconds</Typography>
-              </div>
+              
             </CountdownStyle>
 
             {/* <InputStyle
