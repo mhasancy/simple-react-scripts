@@ -7,7 +7,6 @@ import Iconify from '../../../components/Iconify';
 import Image from '../../../components/Image';
 import MenuPopover from '../../../components/MenuPopover';
 import SettingMode from '../../../components/settings/SettingMode';
-import SettingColorPresets from '../../../components/settings/SettingColorPresets';
 import useSettings from '../../../hooks/useSettings';
 
 // ----------------------------------------------------------------------
@@ -77,15 +76,8 @@ export default function ModePopOver() {
             </MenuItem>
           ))} */}
          <Stack style={{width:"100px"}}  direction="row" alignItems="center" justifyContent="space-between" sx={{ py: 2, pr: 1, pl: 2.5, }}>
-                <Typography variant="subtitle1">Settings</Typography>
-                <div>
-                  <IconButton onClick={onResetSetting}>
-                    <Iconify icon={'ic:round-refresh'} width={20} height={20} />
-                  </IconButton>
-                  <IconButton onClick={handleClose}>
-                    <Iconify icon={'eva:close-fill'} width={20} height={20} />
-                  </IconButton>
-                </div>
+                <Typography variant="subtitle1">Mode</Typography>
+           
               </Stack>
 
               <Divider sx={{ borderStyle: 'dashed' }} />
@@ -93,7 +85,7 @@ export default function ModePopOver() {
           
                 <Stack spacing={3} sx={{ p: 3 }}>
                   <Stack spacing={1.5}>
-                    <Typography variant="subtitle2">Mode</Typography>
+                    
                     <SettingMode />
                   </Stack>
 
@@ -101,10 +93,6 @@ export default function ModePopOver() {
 
                  
 
-                  <Stack spacing={1.5}>
-                    <Typography variant="subtitle2">Presets</Typography>
-                    <SettingColorPresets />
-                  </Stack>
 
                   
 

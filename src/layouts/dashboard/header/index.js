@@ -16,7 +16,6 @@ import Iconify from '../../../components/Iconify';
 //
 import AccountPopover from './AccountPopover';
 import ModePopOver from './ModePopOver';
-import Settings from '../../../components/settings';
 
 // ----------------------------------------------------------------------
 
