@@ -6,8 +6,6 @@ import useCountdown from '../hooks/useCountdown';
 // components
 import Page from '../components/Page';
 import SocialsButton from '../components/SocialsButton';
-// assets
-import { ComingSoonIllustration } from '../assets';
 
 // ----------------------------------------------------------------------
 
@@ -46,7 +44,7 @@ export default function ComingSoon() {
             </Typography>
             <Typography sx={{ color: 'text.secondary' }}>We are currently working hard on this page!</Typography>
 
-            <ComingSoonIllustration sx={{ my: 10, height: 240 }} />
+            
 
             <CountdownStyle>
               <div>

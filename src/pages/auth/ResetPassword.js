@@ -12,7 +12,7 @@ import Page from '../../components/Page';
 // sections
 // import { ResetPasswordForm } from '../../sections/auth/reset-password';
 // assets
-import { SentIcon } from '../../assets';
+
 
 // ----------------------------------------------------------------------
 
@@ -55,7 +55,7 @@ export default function ResetPassword() {
               </>
             ) : (
               <Box sx={{ textAlign: 'center' }}>
-                <SentIcon sx={{ mb: 5, mx: 'auto', height: 160 }} />
+               
 
                 <Typography variant="h3" gutterBottom>
                   Request sent successfully

@@ -5,7 +5,6 @@ import { Button, Typography, Container } from '@mui/material';
 // components
 import Page from '../components/Page';
 //
-import { MaintenanceIllustration } from '../assets';
 
 // ----------------------------------------------------------------------
 
@@ -29,7 +28,7 @@ export default function Maintenance() {
           </Typography>
           <Typography sx={{ color: 'text.secondary' }}>We are currently working hard on this page!</Typography>
 
-          <MaintenanceIllustration sx={{ my: 10, height: 240 }} />
+          
 
           <Button variant="contained" size="large" component={RouterLink} to="/">
             Go to Home

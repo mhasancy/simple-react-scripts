@@ -4,7 +4,6 @@ import { styled } from '@mui/material/styles';
 import { Box, Button, Typography, Container } from '@mui/material';
 // components
 import Page from '../components/Page';
-import { SeverErrorIllustration } from '../assets';
 
 // ----------------------------------------------------------------------
 
@@ -29,7 +28,7 @@ export default function Page500() {
             </Typography>
             <Typography sx={{ color: 'text.secondary' }}>There was an error, please try again later.</Typography>
 
-            <SeverErrorIllustration sx={{ height: 260, my: { xs: 5, sm: 10 } }} />
+           
 
             <Button to="/" size="large" variant="contained" component={RouterLink}>
               Go to Home
