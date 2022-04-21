@@ -8,7 +8,7 @@ import Page from "../components/Page.tsx";
 export default function PageOne() {
   return (
     <Page title="Page One">
-      <Container>
+      <Container style={{ height: "1000px" }}>
         <Typography variant="h3" component="h1" paragraph>
           Page One
         </Typography>

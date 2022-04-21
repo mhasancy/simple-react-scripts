@@ -144,7 +144,7 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
             display: "flex",
             cursor: "pointer",
             alignItems: "center",
-            ...(isHome && { color: "common.white" }),
+            ...(isHome && { color: "common.dark" }),
             ...(isOffset && { color: "text.primary" }),
             ...(isOpen && { opacity: 0.48 }),
           }}
@@ -265,7 +265,7 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
         target="_blank"
         rel="noopener"
         sx={{
-          ...(isHome && { color: "common.white" }),
+          ...(isHome && { color: "common.dark" }),
           ...(isOffset && { color: "text.primary" }),
         }}
       >
