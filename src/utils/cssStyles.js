@@ -2,14 +2,7 @@ import { alpha } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
-function getDirection(value = 'bottom') {
-  return {
-    top: 'to top',
-    right: 'to right',
-    bottom: 'to bottom',
-    left: 'to left',
-  }[value];
-}
+
 
 // ----------------------------------------------------------------------
 
@@ -28,22 +21,21 @@ export default function cssStyles(theme) {
       };
     },
     bgGradient: (props) => {
-      const direction = getDirection(props?.direction);
       const startColor = props?.startColor || `${alpha('#000000', 0)} 0%`;
       const endColor = props?.endColor || '#000000 75%';
 
       return {
-        background: `linear-gradient(${direction}, ${startColor}, ${endColor});`,
+        background: `linear-gradient(, ${startColor}, ${endColor});`,
       };
     },
     bgImage: (props) => {
       const url = props?.url || 'https://minimal-assets-api.vercel.app/assets/images/bg_gradient.jpg';
-      const direction = getDirection(props?.direction);
+     
       const startColor = props?.startColor || alpha(theme?.palette.grey[900] || '#000000', 0.88);
       const endColor = props?.endColor || alpha(theme?.palette.grey[900] || '#000000', 0.88);
 
       return {
-        background: `linear-gradient(${direction}, ${startColor}, ${endColor}), url(${url})`,
+        background: `linear-gradient( ${startColor}, ${endColor}), url(${url})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center center',
